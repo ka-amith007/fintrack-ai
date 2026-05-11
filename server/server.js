@@ -9,9 +9,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
-  credentials: true
+  origin: '*',
+  credentials: false
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
